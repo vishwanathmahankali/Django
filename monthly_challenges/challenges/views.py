@@ -14,6 +14,9 @@ from django.shortcuts import render
 # def march(request):
 #     return HttpResponse("Learn Django for atleast 20 minutes every day!")
 
+def monthly_challenge_by_number(request, month):
+    return HttpResponse(month)
+
 def monthly_challenge(request, month):
     challenge_text = None
     if month == "january":
