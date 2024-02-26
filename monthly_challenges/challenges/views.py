@@ -50,8 +50,10 @@ def monthly_challenge(request, month):
     #     challenge_text = "Walk for atleast 20 minutes every day!"
     # elif month == "march":
     #     challenge_text = "Learn Django for atleast 20 minutes every day!"
-        return HttpResponse(challenge_text)
+        
+        response_data = f"<h1>{challenge_text}</h1>"
+        return HttpResponse(response_data)
     except:
-        return HttpResponseNotFound("This month is not a valid!")
+        return HttpResponseNotFound("<h1>This month is not a valid!</h1>")
 
 
