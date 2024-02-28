@@ -89,3 +89,6 @@ class SinglePostView(View):
     
     
 
+class ReadLaterView(View):
+    def post(self, request):
+        pass
